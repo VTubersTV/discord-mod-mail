@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  discord-modmail:
+    build: .
+    container_name: discord-modmail-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - DATABASE_PATH=/app/data/modmail.db
+    volumes:
+      - ./data:/app/data
+    networks:
+      - modmail-network
+
+networks:
+  modmail-network:
+    driver: bridge

@@ -1,0 +1,4 @@
+# Requirements for Python 3.13 users
+# Use development version of discord.py that supports Python 3.13
+git+https://github.com/Rapptz/discord.py.git
+python-dotenv==1.0.0
